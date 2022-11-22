@@ -1,0 +1,94 @@
+
+
+
+body .container{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    perspective: 1000px;
+    perspective-origin:100px 100px   ;
+}
+
+h1{
+    position: absolute;
+    font-size: 10rem;
+    color: aliceblue;
+    text-shadow: 5px 5px 10px #fff;
+    buttom: 150px;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* background-color: rgba(0, 255, 255, 0.651); */
+    /* transform: rotatez(30deg) rotatey(0deg); */
+   transform-style: preserve-3d;
+   animation: rotate 4s linear infinite;
+   /* animation-direction: reverse; */
+  
+}
+@keyframes rotate {
+    0%{
+        transform: rotatey(0deg)scaley(1)translatey(100px);
+      
+    }
+    50%{
+        transform: rotatey(180deg)scaley(1)translatey(0px);
+        /* animation-direction:alternate-reverse; */
+    }
+    100%{
+        transform: rotatey(360deg)scaley(1)translatey(100px);
+      
+    }
+   
+    
+}
+.front,.left,.right,.back,.buttom{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+     background:linear-gradient(360deg, rgb(181, 2, 2) , rgba(0, 0, 0, 0.893)) ; 
+  /* border: 2px solid white; */
+  
+}
+.front{
+    transform: translatez(100px);  
+}
+.back{
+   
+     transform: translatez(-100px)rotate(0);  
+}
+.right{
+   
+    transform: translatex(100px)rotatey(90deg);  
+}
+.left{
+   
+    transform: translatex(-100px)rotatey(90deg);  
+}
+.container .box .top{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translatey(-100px)rotatex(90deg);
+    background-color: rgba(30, 1, 1, 0.921);
+}
+.buttom{
+    transform: translatey(100px)rotatex(90deg);
+    /* box-shadow: 0px 150px 100px  rgb(181, 2, 2)  ; */
+}
+.container .box .card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translatey(200px)rotatex(90deg);
+    background-color: rgba(230, 6, 6, 0.919);
+    /* background-color: rgba(55, 6, 230, 0.919); */
+    filter: blur(50px);
+}
+
