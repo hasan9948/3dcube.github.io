@@ -7,6 +7,7 @@ body .container{
     width: 100vw;
     perspective: 1000px;
     perspective-origin:100px 100px   ;
+    /* transform-style: preserve-3d; */
 }
 
 h1{
@@ -17,6 +18,7 @@ h1{
     buttom: 150px;
 }
 .box{
+   
     height: 200px;
     width: 200px;
     position: absolute;
@@ -34,15 +36,15 @@ h1{
 }
 @keyframes rotate {
     0%{
-        transform: rotatey(0deg)scaley(1)translatey(100px);
+        transform: rotatey(0deg)scaley(1);
       
     }
     50%{
-        transform: rotatey(180deg)scaley(1)translatey(0px);
+        transform: rotatey(180deg)scaley(1);
         /* animation-direction:alternate-reverse; */
     }
     100%{
-        transform: rotatey(360deg)scaley(1)translatey(100px);
+        transform: rotatey(360deg)scaley(1);
       
     }
    
